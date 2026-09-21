@@ -1,5 +1,16 @@
 [gd_scene format=3 uid="uid://dxlxpenoq6ufq"]
 
+[sub_resource type="Gradient" id="Gradient_erv1k"]
+colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_28flt"]
+gradient = SubResource("Gradient_erv1k")
+fill_from = Vector2(0.3846154, 1)
+fill_to = Vector2(0.3888889, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhxw7"]
+texture = SubResource("GradientTexture2D_28flt")
+
 [node name="main_menu" type="Control" unique_id=207427969]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +18,93 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="main_background" type="Panel" parent="." unique_id=73220291]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_yhxw7")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1588700416]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=93524069]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1651414169]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1019769618]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="logo" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=853131037]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/logo" unique_id=1900380278]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "KOMIKAN"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1939647609]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="buttons_list" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=2091857286]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=1657528596]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="buttons" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=1481745135]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.08
+theme_override_constants/separation = 50
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=1139575402]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "PLAY"
+
+[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=725930718]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "SETTINGS"
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=53424638]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=922948636]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=55643362]
+layout_mode = 2
+size_flags_horizontal = 3
