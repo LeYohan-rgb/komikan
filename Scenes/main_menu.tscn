@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dxlxpenoq6ufq"]
 
+[ext_resource type="Script" uid="uid://cixaqu08uye6m" path="res://Scripts/main_menu.gd" id="1_28flt"]
+
 [sub_resource type="Gradient" id="Gradient_erv1k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
 
@@ -11,6 +13,9 @@ fill_to = Vector2(0.3888889, 0)
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhxw7"]
 texture = SubResource("GradientTexture2D_28flt")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jague"]
+bg_color = Color(0.2051174, 0.20511746, 0.20511732, 1)
+
 [node name="main_menu" type="Control" unique_id=207427969]
 layout_mode = 3
 anchors_preset = 15
@@ -18,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_28flt")
 
 [node name="main_background" type="Panel" parent="." unique_id=73220291]
 layout_mode = 1
@@ -85,13 +91,13 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 4.08
 theme_override_constants/separation = 50
 
-[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=1139575402]
+[node name="play_button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=1139575402]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 60
 text = "PLAY"
 
-[node name="Button2" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=725930718]
+[node name="settings_button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=725930718]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 60
@@ -108,3 +114,19 @@ size_flags_vertical = 3
 [node name="Control2" type="Control" parent="HBoxContainer" unique_id=55643362]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1354299085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="settings_panel" type="Panel" parent="CenterContainer" unique_id=1583629992]
+custom_minimum_size = Vector2(800, 1200)
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jague")
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/settings_button" to="." method="_on_settings_button_pressed"]
