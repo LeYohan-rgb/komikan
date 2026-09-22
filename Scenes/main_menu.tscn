@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dxlxpenoq6ufq"]
 
 [ext_resource type="Script" uid="uid://cixaqu08uye6m" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://dvfroeb7kkw8u" path="res://icon.svg" id="2_48xlc"]
 
 [sub_resource type="Gradient" id="Gradient_erv1k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
@@ -15,6 +16,20 @@ texture = SubResource("GradientTexture2D_28flt")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jague"]
 bg_color = Color(0.2051174, 0.20511746, 0.20511732, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jague"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48xlc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ehe0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce3w2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n45e2"]
 
 [node name="main_menu" type="Control" unique_id=207427969]
 layout_mode = 3
@@ -128,5 +143,120 @@ custom_minimum_size = Vector2(800, 1200)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jague")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/settings_panel" unique_id=1855380223]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=419070831]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer3" unique_id=597190785]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.26
+theme_override_font_sizes/font_size = 80
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer3" unique_id=1954814746]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jague")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_48xlc")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1ehe0")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ce3w2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_n45e2")
+text = "X"
+alignment = 0
+
+[node name="Label2" type="Label" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=683991816]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "      PLAYER SETTINGS"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=1425490996]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer" unique_id=807048208]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Button" type="Button" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer" unique_id=942686677]
+layout_mode = 2
+size_flags_stretch_ratio = 0.48
+icon = ExtResource("2_48xlc")
+
+[node name="Control" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer" unique_id=928045506]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer" unique_id=81786667]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Jugador 1"
+alignment = 1
+max_length = 15
+
+[node name="Control2" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer" unique_id=1578863588]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Control2" type="Control" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=380997105]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=347763893]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1175505965]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Button" type="Button" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1802311883]
+layout_mode = 2
+size_flags_stretch_ratio = 0.48
+icon = ExtResource("2_48xlc")
+
+[node name="Control" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1192449000]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="LineEdit" type="LineEdit" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1000071512]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+placeholder_text = "Jugador 1"
+alignment = 1
+max_length = 15
+
+[node name="Control2" type="Control" parent="CenterContainer/settings_panel/VBoxContainer/HBoxContainer2" unique_id=2122371356]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Control" type="Control" parent="CenterContainer/settings_panel/VBoxContainer" unique_id=1093222018]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.87
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/settings_button" to="." method="_on_settings_button_pressed"]
