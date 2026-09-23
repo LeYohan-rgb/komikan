@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://buehfmqsiva6h"]
+
+[ext_resource type="Script" uid="uid://bm3qmc7ke4a2m" path="res://Scripts/gameplay_selection_mode.gd" id="1_l64gy"]
+
+[sub_resource type="Gradient" id="Gradient_plhc8"]
+colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_28flt"]
+gradient = SubResource("Gradient_plhc8")
+fill_from = Vector2(0.3846154, 1)
+fill_to = Vector2(0.3888889, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l64gy"]
+texture = SubResource("GradientTexture2D_28flt")
+
+[node name="gameplay_selection_mode" type="Control" unique_id=922209678]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l64gy")
+
+[node name="main_background" type="Panel" parent="." unique_id=736881987]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_l64gy")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1271333122]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=605314667]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=25873611]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=2067252297]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="logo" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1320460743]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/logo" unique_id=25592496]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "GAME SELECTION MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1956875930]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="buttons_list" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=405066847]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=1441637750]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="buttons" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=831450530]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 11.71
+theme_override_constants/separation = 50
+
+[node name="1v1_button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=791842429]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "Player vs Player"
+
+[node name="vs_bot_button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/buttons" unique_id=974902767]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+text = "Player vs Bot"
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=227153879]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control4" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1912360994]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=293655417]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/1v1_button" to="." method="_on_v_1_button_pressed"]
