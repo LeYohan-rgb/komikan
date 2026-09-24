@@ -31,6 +31,13 @@ corner_radius_bottom_left = 100
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n45e2"]
 
+[sub_resource type="Theme" id="Theme_1ehe0"]
+OptionButton/icons/arrow = null
+OptionButton/icons/icon = null
+PopupMenu/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+PopupMenu/font_sizes/font_size = 50
+PopupMenu/font_sizes/title_font_size = 16
+
 [node name="main_menu" type="Control" unique_id=207427969]
 layout_mode = 3
 anchors_preset = 15
@@ -153,10 +160,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=419070831]
+[node name="Settings_lbl" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=419070831]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer3" unique_id=597190785]
+[node name="Label" type="Label" parent="Center_setting/settings_panel/VBoxContainer/Settings_lbl" unique_id=597190785]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -166,7 +173,7 @@ text = "SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer3" unique_id=1954814746]
+[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/Settings_lbl" unique_id=1954814746]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.2
@@ -179,33 +186,33 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_n45e2")
 text = "X"
 alignment = 0
 
-[node name="Label2" type="Label" parent="Center_setting/settings_panel/VBoxContainer" unique_id=683991816]
+[node name="plr_settings_lbl" type="Label" parent="Center_setting/settings_panel/VBoxContainer" unique_id=683991816]
 layout_mode = 2
 size_flags_vertical = 6
 theme_override_font_sizes/font_size = 50
 text = "      PLAYER SETTINGS"
 vertical_alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1425490996]
+[node name="jugador_1_lbl" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1425490996]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer" unique_id=807048208]
+[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl" unique_id=807048208]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer" unique_id=942686677]
+[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl" unique_id=942686677]
 layout_mode = 2
 size_flags_stretch_ratio = 0.48
 icon = ExtResource("2_48xlc")
 
-[node name="Control" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer" unique_id=928045506]
+[node name="Control" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl" unique_id=928045506]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="player_1_name" type="LineEdit" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer" unique_id=81786667]
+[node name="player_1_name" type="LineEdit" parent="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl" unique_id=81786667]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 50
@@ -213,7 +220,7 @@ placeholder_text = "Jugador 1"
 alignment = 1
 max_length = 15
 
-[node name="Control2" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer" unique_id=1578863588]
+[node name="Control2" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl" unique_id=1578863588]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
@@ -223,26 +230,26 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=347763893]
+[node name="jugador_2_lbl" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=347763893]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1175505965]
+[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl" unique_id=1175505965]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1802311883]
+[node name="Button" type="Button" parent="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl" unique_id=1802311883]
 layout_mode = 2
 size_flags_stretch_ratio = 0.48
 icon = ExtResource("2_48xlc")
 
-[node name="Control" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1192449000]
+[node name="Control" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl" unique_id=1192449000]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="player_2_name" type="LineEdit" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer2" unique_id=1000071512]
+[node name="player_2_name" type="LineEdit" parent="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl" unique_id=1000071512]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 50
@@ -250,18 +257,67 @@ placeholder_text = "Jugador 1"
 alignment = 1
 max_length = 15
 
-[node name="Control2" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer2" unique_id=2122371356]
+[node name="Control2" type="Control" parent="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl" unique_id=2122371356]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="Control" type="Control" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1093222018]
+[node name="Label3" type="Label" parent="Center_setting/settings_panel/VBoxContainer" unique_id=987968164]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "      GAME MODES"
+vertical_alignment = 1
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1101872453]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 4.87
+
+[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=985991338]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="OptionButton" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=1104163667]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_1ehe0")
+theme_override_font_sizes/font_size = 50
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Random"
+popup/item_0/id = 0
+popup/item_1/text = "Manual"
+popup/item_1/id = 1
+
+[node name="Control2" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=1154559994]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Label" type="Label" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=975679473]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "Los roles son elegidos
+manualmente."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control4" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=2144935314]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1845292886]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/play_button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/settings_button" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Center_setting/settings_panel/VBoxContainer/HBoxContainer3/Button" to="." method="_on_button_pressed"]
-[connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/HBoxContainer/player_1_name" to="." method="_on_player_1_name_text_changed"]
-[connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/HBoxContainer2/player_2_name" to="." method="_on_player_2_name_text_changed"]
+[connection signal="pressed" from="Center_setting/settings_panel/VBoxContainer/Settings_lbl/Button" to="." method="_on_button_pressed"]
+[connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl/player_1_name" to="." method="_on_player_1_name_text_changed"]
+[connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl/player_2_name" to="." method="_on_player_2_name_text_changed"]
