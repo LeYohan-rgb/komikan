@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cixaqu08uye6m" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://dvfroeb7kkw8u" path="res://icon.svg" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://ds61lsjqyr8pa" path="res://Graphics/flecha_pabajo.png" id="3_1ehe0"]
 
 [sub_resource type="Gradient" id="Gradient_erv1k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
@@ -32,7 +33,8 @@ corner_radius_bottom_left = 100
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n45e2"]
 
 [sub_resource type="Theme" id="Theme_1ehe0"]
-OptionButton/icons/arrow = null
+OptionButton/constants/arrow_margin = 20
+OptionButton/icons/arrow = ExtResource("3_1ehe0")
 OptionButton/icons/icon = null
 PopupMenu/colors/font_color = Color(0.875, 0.875, 0.875, 1)
 PopupMenu/font_sizes/font_size = 50
@@ -216,7 +218,7 @@ size_flags_stretch_ratio = 0.13
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 50
-placeholder_text = "Jugador 1"
+placeholder_text = "Player 1"
 alignment = 1
 max_length = 15
 
@@ -253,7 +255,7 @@ size_flags_stretch_ratio = 0.13
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 50
-placeholder_text = "Jugador 1"
+placeholder_text = "Player 2"
 alignment = 1
 max_length = 15
 
@@ -278,7 +280,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="OptionButton" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=1104163667]
+[node name="game_mode_bttn" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=1104163667]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_1ehe0")
@@ -296,13 +298,13 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="Label" type="Label" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=975679473]
+[node name="game_mode_desc" type="Label" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=975679473]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_font_sizes/font_size = 32
-text = "Los roles son elegidos
-manualmente."
+text = "Roles are chosen
+randomly."
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -311,7 +313,43 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
-[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1845292886]
+[node name="Label4" type="Label" parent="Center_setting/settings_panel/VBoxContainer" unique_id=184758454]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 50
+text = "      LANGUAGE"
+vertical_alignment = 1
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Center_setting/settings_panel/VBoxContainer" unique_id=177490001]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control3" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer5" unique_id=184373336]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="language_btn" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer5" unique_id=1021255166]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_1ehe0")
+theme_override_font_sizes/font_size = 50
+alignment = 1
+selected = 0
+item_count = 3
+popup/item_0/text = "English"
+popup/item_0/id = 0
+popup/item_1/text = "Español"
+popup/item_1/id = 1
+popup/item_2/text = "Mapudungun"
+popup/item_2/id = 2
+
+[node name="Control4" type="Control" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer5" unique_id=141987395]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Control5" type="Control" parent="Center_setting/settings_panel/VBoxContainer" unique_id=1845292886]
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
@@ -321,3 +359,5 @@ size_flags_stretch_ratio = 2.0
 [connection signal="pressed" from="Center_setting/settings_panel/VBoxContainer/Settings_lbl/Button" to="." method="_on_button_pressed"]
 [connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/jugador_1_lbl/player_1_name" to="." method="_on_player_1_name_text_changed"]
 [connection signal="text_changed" from="Center_setting/settings_panel/VBoxContainer/jugador_2_lbl/player_2_name" to="." method="_on_player_2_name_text_changed"]
+[connection signal="item_selected" from="Center_setting/settings_panel/VBoxContainer/HBoxContainer4/game_mode_bttn" to="." method="_on_game_mode_bttn_item_selected"]
+[connection signal="item_selected" from="Center_setting/settings_panel/VBoxContainer/HBoxContainer5/language_btn" to="." method="_on_languagebtn_item_selected"]

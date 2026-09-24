@@ -2,6 +2,7 @@ extends Control
 
 @onready var settings_panel = $Center_setting/settings_panel
 @onready var settings_panel_centered = $Center_setting
+@onready var game_mode_desc = $Center_setting/settings_panel/VBoxContainer/HBoxContainer4/game_mode_desc
 
 
 func _ready() -> void:
@@ -28,3 +29,14 @@ func _on_player_1_name_text_changed(new_text: String) -> void:
 
 func _on_player_2_name_text_changed(new_text: String) -> void:
 	Global.player_name_2 = new_text
+
+
+func _on_game_mode_bttn_item_selected(index: int) -> void:
+	if index == 0:
+		game_mode_desc.text = "Roles are chosen\nrandomly."
+	if index == 1:
+		game_mode_desc.text = "Roles are chosen\nmanually."
+
+
+func _on_languagebtn_item_selected(index: int) -> void:
+	Global.language_mode = index
