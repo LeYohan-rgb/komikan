@@ -147,8 +147,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="settings_panel" type="Panel" parent="Center_setting" unique_id=1583629992]
+visible = false
 custom_minimum_size = Vector2(800, 1200)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0

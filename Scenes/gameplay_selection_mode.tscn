@@ -5,13 +5,13 @@
 [sub_resource type="Gradient" id="Gradient_plhc8"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_28flt"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l64gy"]
 gradient = SubResource("Gradient_plhc8")
 fill_from = Vector2(0.3846154, 1)
 fill_to = Vector2(0.3888889, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l64gy"]
-texture = SubResource("GradientTexture2D_28flt")
+texture = SubResource("GradientTexture2D_l64gy")
 
 [node name="gameplay_selection_mode" type="Control" unique_id=922209678]
 layout_mode = 3
@@ -116,3 +116,4 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/1v1_button" to="." method="_on_v_1_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/buttons_list/buttons/vs_bot_button" to="." method="_on_vs_bot_button_pressed"]
