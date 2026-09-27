@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bbgccac88fbt0"]
 
 [ext_resource type="Script" uid="uid://d1xerj3c6hfg2" path="res://Scripts/selection_mode_transition.gd" id="1_b56n5"]
+[ext_resource type="Texture2D" uid="uid://dvfroeb7kkw8u" path="res://icon.svg" id="2_o0p6r"]
 
 [sub_resource type="Gradient" id="Gradient_es16k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
@@ -30,3 +31,123 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_b56n5")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1119898779]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="HBoxContainer" unique_id=695531131]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1808650225]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=254243156]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="logo" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1825061749]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/logo" unique_id=762534551]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+text = "SELECT THE ROLES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control3" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1637309515]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="buttons_list" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1878847090]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/VBoxContainer/buttons_list" unique_id=1723992833]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=624456515]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer3" unique_id=1480576985]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+icon = ExtResource("2_o0p6r")
+flat = true
+
+[node name="plr_1_role_lbl" type="Label" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer3" unique_id=1950253828]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "Player 1's Role"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=151900357]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=850872831]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=840493819]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=2077295315]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=860370500]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer2" unique_id=1808201085]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.25
+icon = ExtResource("2_o0p6r")
+flat = true
+
+[node name="plr_2_role_lbl" type="Label" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer2" unique_id=1101939170]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "Player 2's Role"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OptionButton2" type="OptionButton" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer" unique_id=1804067389]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control4" type="Control" parent="HBoxContainer/VBoxContainer" unique_id=1136235252]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="HBoxContainer" unique_id=360670044]
+layout_mode = 2
+size_flags_horizontal = 3
