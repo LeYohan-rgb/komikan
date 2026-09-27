@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cixaqu08uye6m" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://dvfroeb7kkw8u" path="res://icon.svg" id="2_48xlc"]
-[ext_resource type="Texture2D" uid="uid://ds61lsjqyr8pa" path="res://Graphics/flecha_pabajo.png" id="3_1ehe0"]
+[ext_resource type="Theme" uid="uid://bevoqb6dcfykx" path="res://Themes/drop_down_menu.tres" id="3_1ehe0"]
 
 [sub_resource type="Gradient" id="Gradient_erv1k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
@@ -31,14 +31,6 @@ corner_radius_bottom_left = 100
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce3w2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n45e2"]
-
-[sub_resource type="Theme" id="Theme_1ehe0"]
-OptionButton/constants/arrow_margin = 20
-OptionButton/icons/arrow = ExtResource("3_1ehe0")
-OptionButton/icons/icon = null
-PopupMenu/colors/font_color = Color(0.875, 0.875, 0.875, 1)
-PopupMenu/font_sizes/font_size = 50
-PopupMenu/font_sizes/title_font_size = 16
 
 [node name="main_menu" type="Control" unique_id=207427969]
 layout_mode = 3
@@ -150,7 +142,6 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="settings_panel" type="Panel" parent="Center_setting" unique_id=1583629992]
-visible = false
 custom_minimum_size = Vector2(800, 1200)
 layout_mode = 2
 size_flags_stretch_ratio = 0.0
@@ -285,7 +276,7 @@ size_flags_stretch_ratio = 0.13
 [node name="game_mode_bttn" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer4" unique_id=1104163667]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = SubResource("Theme_1ehe0")
+theme = ExtResource("3_1ehe0")
 theme_override_font_sizes/font_size = 50
 alignment = 1
 selected = 0
@@ -334,7 +325,7 @@ size_flags_stretch_ratio = 0.13
 [node name="language_btn" type="OptionButton" parent="Center_setting/settings_panel/VBoxContainer/HBoxContainer5" unique_id=1021255166]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = SubResource("Theme_1ehe0")
+theme = ExtResource("3_1ehe0")
 theme_override_font_sizes/font_size = 50
 alignment = 1
 selected = 0

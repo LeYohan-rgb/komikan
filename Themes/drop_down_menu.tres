@@ -1,0 +1,11 @@
+[gd_resource type="Theme" format=3 uid="uid://bevoqb6dcfykx"]
+
+[ext_resource type="Texture2D" uid="uid://ds61lsjqyr8pa" path="res://Graphics/flecha_pabajo.png" id="1_vaam0"]
+
+[resource]
+OptionButton/constants/arrow_margin = 20
+OptionButton/icons/arrow = ExtResource("1_vaam0")
+OptionButton/icons/icon = null
+PopupMenu/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+PopupMenu/font_sizes/font_size = 50
+PopupMenu/font_sizes/title_font_size = 16
