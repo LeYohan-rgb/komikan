@@ -11,3 +11,8 @@ var player_mode : int = 0
 
 #0 ENGLISH; #1 SPANISH; #2 MAPUDUNGUN
 var language_mode : int = 0
+
+#who is the pangui - 0: first, 1: second
+var pangui_player_mode : int = 0
+#0: first, 1: bot
+var pangui_bot_mode : int = 0
