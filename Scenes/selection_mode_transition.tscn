@@ -7,13 +7,13 @@
 [sub_resource type="Gradient" id="Gradient_es16k"]
 colors = PackedColorArray(0.23031491, 0.23031494, 0.23031494, 1, 1, 1, 1, 1)
 
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_28flt"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_qn26m"]
 gradient = SubResource("Gradient_es16k")
 fill_from = Vector2(0.3846154, 1)
 fill_to = Vector2(0.3888889, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b56n5"]
-texture = SubResource("GradientTexture2D_28flt")
+texture = SubResource("GradientTexture2D_qn26m")
 
 [node name="selection_mode_transition" type="Control" unique_id=1771894821]
 layout_mode = 3
@@ -96,7 +96,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.25
 icon = ExtResource("2_o0p6r")
 
-[node name="OptionButton" type="OptionButton" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer" unique_id=1061075501]
+[node name="player_names_options" type="OptionButton" parent="HBoxContainer/VBoxContainer/buttons_list/VBoxContainer/HBoxContainer" unique_id=1061075501]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3

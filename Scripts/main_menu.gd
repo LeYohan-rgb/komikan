@@ -33,8 +33,10 @@ func _on_player_2_name_text_changed(new_text: String) -> void:
 
 func _on_game_mode_bttn_item_selected(index: int) -> void:
 	if index == 0:
+		Global.game_mode = 0
 		game_mode_desc.text = "Roles are chosen\nrandomly."
 	if index == 1:
+		Global.game_mode = 1
 		game_mode_desc.text = "Roles are chosen\nmanually."
 
 
