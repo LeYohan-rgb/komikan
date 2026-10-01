@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bcea2io7e6nmc"]
+
+[ext_resource type="Texture2D" uid="uid://dvfroeb7kkw8u" path="res://icon.svg" id="1_xsjyq"]
+
+[node name="tile" type="Control" unique_id=1331111654]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 50.0
+offset_bottom = 50.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1189331750]
+position = Vector2(26, 26)
+scale = Vector2(0.390625, 0.390625)
+texture = ExtResource("1_xsjyq")
