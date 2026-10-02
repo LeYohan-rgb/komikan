@@ -5,7 +5,9 @@ extends Control
 @export var neighbors : Array[int] #CLOCKWISE
 @onready var anim_sprite = $AnimatedSprite2D
 @export var is_pressed = "" # "", selected, highlighted
-signal selected_tile(is_pressed : String, cell_num : int)
+@onready var selection_radius = $button_selection_radius
+@onready var selected_radius = $selected_selection_radius
+signal selected_tile(is_pressed : String, cell_num : int, cell_state : String)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -40,9 +42,23 @@ func change_state(changed_state : String):
 func _on_button_pressed() -> void:
 	if state == "null":
 		return
-		
 	if is_pressed == "":
 		is_pressed = "selected"
-		selected_tile.emit(is_pressed, cell_ID)
+		selected_radius.show()
+		selected_tile.emit(is_pressed, cell_ID, state)
+		print("a")
+	elif is_pressed == "selected":
+		print('b')
+		is_pressed = ""
+		selected_radius.hide()
+		selected_tile.emit(is_pressed, cell_ID, state)
 		
-	print("pressed", state)
+func change_is_pressed_state(changed_is_pressed : String):
+	if changed_is_pressed == "highlighted":
+		is_pressed = "highlighted"
+		selection_radius.show()
+	elif changed_is_pressed == "":
+		is_pressed = ""
+		selection_radius.hide()
+		
+		
