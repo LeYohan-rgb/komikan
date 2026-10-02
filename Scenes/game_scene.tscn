@@ -63,6 +63,7 @@ theme_override_constants/v_separation = 67
 [node name="tile26" parent="game_scene_layout/board_layout/triangle_board/row_1" unique_id=1331111654 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 26
 neighbors = Array[int]([27, 31])
 
 [node name="row_2" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1380362969]
@@ -77,6 +78,8 @@ state = "null"
 [node name="tile31" parent="game_scene_layout/board_layout/triangle_board/row_2" unique_id=1345619771 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 31
+neighbors = Array[int]([32, 36, 26])
 
 [node name="row_3" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1370903868]
 layout_mode = 2
@@ -85,14 +88,20 @@ theme_override_constants/v_separation = 67
 [node name="tile27" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=624398797 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 27
+neighbors = Array[int]([28, 32, 26])
 
 [node name="tile32" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=1178471661 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 32
+neighbors = Array[int]([27, 33, 36, 31])
 
 [node name="tile36" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=1534843323 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 36
+neighbors = Array[int]([32, 37, 3, 31])
 
 [node name="row_4" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1920645385]
 layout_mode = 2
@@ -101,14 +110,20 @@ theme_override_constants/v_separation = 67
 [node name="tile28" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=770614911 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 28
+neighbors = Array[int]([29, 33, 27])
 
 [node name="tile33" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=1647229703 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 33
+neighbors = Array[int]([28, 34, 37, 32])
 
 [node name="tile37" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=508963051 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 37
+neighbors = Array[int]([33, 38, 3, 36])
 
 [node name="row_5" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1836124627]
 layout_mode = 2
@@ -117,14 +132,20 @@ theme_override_constants/v_separation = 67
 [node name="tile29" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=1111032601 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 29
+neighbors = Array[int]([30, 34, 28])
 
 [node name="tile34" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=101207105 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 34
+neighbors = Array[int]([29, 35, 38, 33])
 
 [node name="tile38" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=303004866 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 38
+neighbors = Array[int]([34, 35, 3, 37])
 
 [node name="row_6" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=869466926]
 layout_mode = 2
@@ -138,6 +159,8 @@ state = "null"
 [node name="tile35" parent="game_scene_layout/board_layout/triangle_board/row_6" unique_id=1340308434 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 35
+neighbors = Array[int]([36, 38, 34])
 
 [node name="row_7" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=613261556]
 layout_mode = 2
@@ -146,6 +169,8 @@ theme_override_constants/v_separation = 67
 [node name="tile30" parent="game_scene_layout/board_layout/triangle_board/row_7" unique_id=1364329826 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 30
+neighbors = Array[int]([35, 29])
 
 [node name="big_square_board" type="GridContainer" parent="game_scene_layout/board_layout" unique_id=53629640]
 layout_mode = 2
@@ -159,102 +184,152 @@ columns = 5
 [node name="tile1" parent="game_scene_layout/board_layout/big_square_board" unique_id=2042005249 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 1
+neighbors = Array[int]([2, 7, 6])
 
 [node name="tile2" parent="game_scene_layout/board_layout/big_square_board" unique_id=1564875243 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 2
+neighbors = Array[int]([3, 7, 1])
 
 [node name="tile3" parent="game_scene_layout/board_layout/big_square_board" unique_id=1392585785 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 3
+neighbors = Array[int]([37, 38, 4, 9, 8, 7, 2, 36])
 
 [node name="tile4" parent="game_scene_layout/board_layout/big_square_board" unique_id=83041954 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 4
+neighbors = Array[int]([5, 9, 3])
 
 [node name="tile5" parent="game_scene_layout/board_layout/big_square_board" unique_id=1776810209 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 5
+neighbors = Array[int]([10, 9, 4])
 
 [node name="tile6" parent="game_scene_layout/board_layout/big_square_board" unique_id=1561313850 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 6
+neighbors = Array[int]([1, 7, 11])
 
 [node name="tile7" parent="game_scene_layout/board_layout/big_square_board" unique_id=548505014 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 7
+neighbors = Array[int]([2, 3, 8, 13, 12, 11, 6, 1])
 
 [node name="tile8" parent="game_scene_layout/board_layout/big_square_board" unique_id=1972821514 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 8
+neighbors = Array[int]([3, 9, 13, 7])
 
 [node name="tile9" parent="game_scene_layout/board_layout/big_square_board" unique_id=1295841130 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 9
+neighbors = Array[int]([4, 5, 10, 15, 14, 13, 8, 3])
 
 [node name="tile10" parent="game_scene_layout/board_layout/big_square_board" unique_id=1627703811 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 10
+neighbors = Array[int]([5, 15, 9])
 
 [node name="tile11" parent="game_scene_layout/board_layout/big_square_board" unique_id=272307940 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 11
+neighbors = Array[int]([6, 7, 12, 17, 16])
 
 [node name="tile12" parent="game_scene_layout/board_layout/big_square_board" unique_id=682307420 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 12
+neighbors = Array[int]([7, 13, 17, 11])
 
 [node name="tile13" parent="game_scene_layout/board_layout/big_square_board" unique_id=406171312 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 13
+neighbors = Array[int]([8, 9, 14, 19, 18, 17, 12, 7])
 
 [node name="tile14" parent="game_scene_layout/board_layout/big_square_board" unique_id=1778559568 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 14
+neighbors = Array[int]([9, 15, 19, 13])
 
 [node name="tile15" parent="game_scene_layout/board_layout/big_square_board" unique_id=482054434 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 15
+neighbors = Array[int]([10, 20, 19, 14, 9])
 
 [node name="tile16" parent="game_scene_layout/board_layout/big_square_board" unique_id=1462957809 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 16
+neighbors = Array[int]([11, 17, 21])
 
 [node name="tile17" parent="game_scene_layout/board_layout/big_square_board" unique_id=628271975 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 17
+neighbors = Array[int]([12, 13, 18, 23, 22, 21, 16, 11])
 
 [node name="tile18" parent="game_scene_layout/board_layout/big_square_board" unique_id=21111786 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 18
+neighbors = Array[int]([13, 19, 23, 17])
 
 [node name="tile19" parent="game_scene_layout/board_layout/big_square_board" unique_id=942549088 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 19
+neighbors = Array[int]([14, 15, 20, 25, 24, 23, 18, 13])
 
 [node name="tile20" parent="game_scene_layout/board_layout/big_square_board" unique_id=918917612 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 20
+neighbors = Array[int]([15, 25, 19])
 
 [node name="tile21" parent="game_scene_layout/board_layout/big_square_board" unique_id=309736119 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 21
+neighbors = Array[int]([16, 17, 22])
 
 [node name="tile22" parent="game_scene_layout/board_layout/big_square_board" unique_id=918789883 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 22
+neighbors = Array[int]([17, 23, 21])
 
 [node name="tile23" parent="game_scene_layout/board_layout/big_square_board" unique_id=1766822584 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 23
+neighbors = Array[int]([18, 19, 24, 22, 17])
 
 [node name="tile24" parent="game_scene_layout/board_layout/big_square_board" unique_id=1450365829 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 24
+neighbors = Array[int]([19, 25, 23])
 
 [node name="tile25" parent="game_scene_layout/board_layout/big_square_board" unique_id=1690990126 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+cell_ID = 25
+neighbors = Array[int]([20, 24, 19])
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="game_scene_layout" unique_id=550687585]
 layout_mode = 2

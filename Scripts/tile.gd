@@ -1,8 +1,12 @@
 extends Control
 
+@export var cell_ID : int
 @export var state : String
 @export var neighbors : Array[int] #CLOCKWISE
 @onready var anim_sprite = $AnimatedSprite2D
+@export var is_pressed = "" # "", selected, highlighted
+signal selected_tile(is_pressed : String, cell_num : int)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if state == "":
@@ -36,5 +40,9 @@ func change_state(changed_state : String):
 func _on_button_pressed() -> void:
 	if state == "null":
 		return
+		
+	if is_pressed == "":
+		is_pressed = "selected"
+		selected_tile.emit(is_pressed, cell_ID)
 		
 	print("pressed", state)
