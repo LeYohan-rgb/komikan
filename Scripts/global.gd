@@ -16,3 +16,6 @@ var language_mode : int = 0
 var pangui_player_mode : int = 0
 #0: first, 1: bot
 var pangui_bot_mode : int = 0
+
+#GAME RELATED VARIABLES
+var selected_cell : int = 0

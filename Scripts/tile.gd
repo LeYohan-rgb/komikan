@@ -42,15 +42,17 @@ func change_state(changed_state : String):
 func _on_button_pressed() -> void:
 	if state == "null":
 		return
+	if state == "" and is_pressed != "highlighted":
+		return
+		
 	if is_pressed == "":
 		is_pressed = "selected"
 		selected_radius.show()
 		selected_tile.emit(is_pressed, cell_ID, state)
-		print("a")
 	elif is_pressed == "selected":
-		print('b')
 		is_pressed = ""
 		selected_radius.hide()
+		selection_radius.hide()
 		selected_tile.emit(is_pressed, cell_ID, state)
 		
 func change_is_pressed_state(changed_is_pressed : String):
@@ -60,5 +62,6 @@ func change_is_pressed_state(changed_is_pressed : String):
 	elif changed_is_pressed == "":
 		is_pressed = ""
 		selection_radius.hide()
+		selected_radius.hide()
 		
 		

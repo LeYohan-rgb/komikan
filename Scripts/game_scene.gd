@@ -96,11 +96,26 @@ func pressed_tile(is_pressed : String, cell_num : int, cell_state : String):
 	if cell_state == "":
 		return
 		
-	if is_pressed == "":
+	if is_pressed == "": #DESELECT
+		#NO CELL NOW
+		Global.selected_cell = 0
 		for i in cell_ID_to_node[cell_num].neighbors:
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("")
-	elif is_pressed == "selected":
+	elif is_pressed == "selected": #SELECT
+		#declare the globally selected cell
+		if Global.selected_cell == 0:
+			Global.selected_cell = cell_num
+		else: #ALREADY A SELECTED CELL
+			deselect_cell(Global.selected_cell) #UNSELECT THE PREVIOUS CELL
+			Global.selected_cell = cell_num #DECLARE NEW SELECTED CELL AS SELECTED
+				
 		for i in cell_ID_to_node[cell_num].neighbors:
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("highlighted")
+
+func deselect_cell(cell_num : int):
+		cell_ID_to_node[cell_num].change_is_pressed_state("")
+		for i in cell_ID_to_node[cell_num].neighbors:
+			if cell_ID_to_node[i].state == "":
+				cell_ID_to_node[i].change_is_pressed_state("")
