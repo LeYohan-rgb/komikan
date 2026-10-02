@@ -11,6 +11,10 @@ func _process(delta: float) -> void:
 	pass
 
 func load_initial_board_state():
+	#GET RID OF NON-TILES
+	get_node("game_scene_layout/board_layout/triangle_board/row_2/tile").change_state("null")
+	get_node("game_scene_layout/board_layout/triangle_board/row_6/tile").change_state("null")
+	
 	#PANGUI
 	change_tile_state(33, "pangui", true, 4)
 	

@@ -63,6 +63,7 @@ theme_override_constants/v_separation = 67
 [node name="tile26" parent="game_scene_layout/board_layout/triangle_board/row_1" unique_id=1331111654 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+neighbors = Array[int]([27, 31])
 
 [node name="row_2" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1380362969]
 layout_mode = 2
@@ -71,6 +72,7 @@ theme_override_constants/v_separation = 67
 [node name="tile" parent="game_scene_layout/board_layout/triangle_board/row_2" unique_id=1472585669 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+state = "null"
 
 [node name="tile31" parent="game_scene_layout/board_layout/triangle_board/row_2" unique_id=1345619771 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
@@ -131,6 +133,7 @@ theme_override_constants/v_separation = 67
 [node name="tile" parent="game_scene_layout/board_layout/triangle_board/row_6" unique_id=332566670 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
+state = "null"
 
 [node name="tile35" parent="game_scene_layout/board_layout/triangle_board/row_6" unique_id=1340308434 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)

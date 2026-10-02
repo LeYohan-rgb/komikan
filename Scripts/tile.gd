@@ -1,6 +1,7 @@
 extends Control
 
-@export var state : String = ""
+@export var state : String
+@export var neighbors : Array[int] #CLOCKWISE
 @onready var anim_sprite = $AnimatedSprite2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,12 +20,21 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func change_state(state : String):
-	if state == "":
+func change_state(changed_state : String):
+	state = changed_state
+	
+	if changed_state == "":
 		anim_sprite.play("default")
-	if state == "pangui":
+	if changed_state == "pangui":
 		anim_sprite.play("pangui")
-	if state == "trewa":
+	if changed_state == "trewa":
 		anim_sprite.play("trewa")
-	if state == "null":
+	if changed_state == "null":
 		anim_sprite.hide()
+
+
+func _on_button_pressed() -> void:
+	if state == "null":
+		return
+		
+	print("pressed", state)

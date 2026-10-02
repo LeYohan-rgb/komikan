@@ -43,3 +43,20 @@ script = ExtResource("1_rvq8p")
 position = Vector2(26, 26)
 scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_jague")
+
+[node name="Button" type="Button" parent="." unique_id=669134408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -51.0
+offset_right = 51.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
