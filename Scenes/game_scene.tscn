@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://hutq0vv3okvx"]
 
+[ext_resource type="Script" uid="uid://c0oub7gjp7j7i" path="res://Scripts/game_scene.gd" id="1_b6fju"]
 [ext_resource type="PackedScene" uid="uid://bcea2io7e6nmc" path="res://Scenes/tile.tscn" id="1_x87qo"]
 
 [sub_resource type="Gradient" id="Gradient_oqyrl"]
@@ -20,6 +21,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_b6fju")
 
 [node name="main_background" type="Panel" parent="." unique_id=1285088870]
 layout_mode = 1
@@ -54,91 +56,91 @@ size_flags_vertical = 6
 theme_override_constants/h_separation = 67
 columns = 7
 
-[node name="GridContainer" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1292081795]
+[node name="row_1" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1292081795]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer" unique_id=1331111654 instance=ExtResource("1_x87qo")]
+[node name="tile26" parent="game_scene_layout/board_layout/triangle_board/row_1" unique_id=1331111654 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer2" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1380362969]
+[node name="row_2" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1380362969]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer2" unique_id=1472585669 instance=ExtResource("1_x87qo")]
+[node name="tile" parent="game_scene_layout/board_layout/triangle_board/row_2" unique_id=1472585669 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile2" parent="game_scene_layout/board_layout/triangle_board/GridContainer2" unique_id=1345619771 instance=ExtResource("1_x87qo")]
+[node name="tile31" parent="game_scene_layout/board_layout/triangle_board/row_2" unique_id=1345619771 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer3" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1370903868]
+[node name="row_3" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1370903868]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer3" unique_id=624398797 instance=ExtResource("1_x87qo")]
+[node name="tile27" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=624398797 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile2" parent="game_scene_layout/board_layout/triangle_board/GridContainer3" unique_id=1178471661 instance=ExtResource("1_x87qo")]
+[node name="tile32" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=1178471661 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile3" parent="game_scene_layout/board_layout/triangle_board/GridContainer3" unique_id=1534843323 instance=ExtResource("1_x87qo")]
+[node name="tile36" parent="game_scene_layout/board_layout/triangle_board/row_3" unique_id=1534843323 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer4" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1920645385]
+[node name="row_4" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1920645385]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer4" unique_id=770614911 instance=ExtResource("1_x87qo")]
+[node name="tile28" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=770614911 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile2" parent="game_scene_layout/board_layout/triangle_board/GridContainer4" unique_id=1647229703 instance=ExtResource("1_x87qo")]
+[node name="tile33" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=1647229703 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile3" parent="game_scene_layout/board_layout/triangle_board/GridContainer4" unique_id=508963051 instance=ExtResource("1_x87qo")]
+[node name="tile37" parent="game_scene_layout/board_layout/triangle_board/row_4" unique_id=508963051 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer5" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1836124627]
+[node name="row_5" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=1836124627]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer5" unique_id=1111032601 instance=ExtResource("1_x87qo")]
+[node name="tile29" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=1111032601 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile2" parent="game_scene_layout/board_layout/triangle_board/GridContainer5" unique_id=101207105 instance=ExtResource("1_x87qo")]
+[node name="tile34" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=101207105 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile3" parent="game_scene_layout/board_layout/triangle_board/GridContainer5" unique_id=303004866 instance=ExtResource("1_x87qo")]
+[node name="tile38" parent="game_scene_layout/board_layout/triangle_board/row_5" unique_id=303004866 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer6" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=869466926]
+[node name="row_6" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=869466926]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer6" unique_id=332566670 instance=ExtResource("1_x87qo")]
+[node name="tile" parent="game_scene_layout/board_layout/triangle_board/row_6" unique_id=332566670 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="tile2" parent="game_scene_layout/board_layout/triangle_board/GridContainer6" unique_id=1340308434 instance=ExtResource("1_x87qo")]
+[node name="tile35" parent="game_scene_layout/board_layout/triangle_board/row_6" unique_id=1340308434 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
-[node name="GridContainer7" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=613261556]
+[node name="row_7" type="GridContainer" parent="game_scene_layout/board_layout/triangle_board" unique_id=613261556]
 layout_mode = 2
 theme_override_constants/v_separation = 67
 
-[node name="tile" parent="game_scene_layout/board_layout/triangle_board/GridContainer7" unique_id=1364329826 instance=ExtResource("1_x87qo")]
+[node name="tile30" parent="game_scene_layout/board_layout/triangle_board/row_7" unique_id=1364329826 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
@@ -151,7 +153,7 @@ theme_override_constants/h_separation = 100
 theme_override_constants/v_separation = 100
 columns = 5
 
-[node name="tile" parent="game_scene_layout/board_layout/big_square_board" unique_id=2042005249 instance=ExtResource("1_x87qo")]
+[node name="tile1" parent="game_scene_layout/board_layout/big_square_board" unique_id=2042005249 instance=ExtResource("1_x87qo")]
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 
