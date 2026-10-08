@@ -44,7 +44,10 @@ func _ready() -> void:
 	38: get_node("game_scene_layout/board_layout/triangle_board/row_5/tile38")
 	}
 	load_initial_board_state()
+	
+	#CONNECT SIGNALS
 	connect_all_signals("selected_tile", pressed_tile)
+	connect_all_signals("perform_move", move_performed)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -119,3 +122,19 @@ func deselect_cell(cell_num : int):
 		for i in cell_ID_to_node[cell_num].neighbors:
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("")
+
+func move_performed(cell_num : int):
+	var selected_cell_ID_state = cell_ID_to_node[Global.selected_cell].state
+	
+	#UNHIGHLIGHT ALL OTHER CELLS
+	await deselect_cell(Global.selected_cell)
+	
+	# CHANGE RESPECTIVE CELL'S STATES
+	cell_ID_to_node[Global.selected_cell].change_state("")
+	cell_ID_to_node[cell_num].change_state(selected_cell_ID_state)
+	
+	#RESET SELECTED CELL BACK TO 0
+	Global.selected_cell = 0
+	
+	
+	

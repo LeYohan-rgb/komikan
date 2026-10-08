@@ -8,6 +8,7 @@ extends Control
 @onready var selection_radius = $button_selection_radius
 @onready var selected_radius = $selected_selection_radius
 signal selected_tile(is_pressed : String, cell_num : int, cell_state : String)
+signal perform_move(cell_num : int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,6 +55,9 @@ func _on_button_pressed() -> void:
 		selected_radius.hide()
 		selection_radius.hide()
 		selected_tile.emit(is_pressed, cell_ID, state)
+	elif is_pressed == "highlighted":
+		perform_move.emit(cell_ID)
+		
 		
 func change_is_pressed_state(changed_is_pressed : String):
 	if changed_is_pressed == "highlighted":
