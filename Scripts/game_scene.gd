@@ -103,6 +103,8 @@ func pressed_tile(is_pressed : String, cell_num : int, cell_state : String):
 		#NO CELL NOW
 		Global.selected_cell = 0
 		for i in cell_ID_to_node[cell_num].neighbors:
+			if i == 0:
+				continue
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("")
 	elif is_pressed == "selected": #SELECT
@@ -114,12 +116,18 @@ func pressed_tile(is_pressed : String, cell_num : int, cell_state : String):
 			Global.selected_cell = cell_num #DECLARE NEW SELECTED CELL AS SELECTED
 				
 		for i in cell_ID_to_node[cell_num].neighbors:
+			
+			if i == 0:
+				continue
+				
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("highlighted")
 
 func deselect_cell(cell_num : int):
 		cell_ID_to_node[cell_num].change_is_pressed_state("")
 		for i in cell_ID_to_node[cell_num].neighbors:
+			if i == 0:
+				continue
 			if cell_ID_to_node[i].state == "":
 				cell_ID_to_node[i].change_is_pressed_state("")
 
